@@ -12,12 +12,12 @@ initializeApp({
     private_key: process.env.PRIVATE_KEY,
     client_email: process.env.CLIENT_EMAIL,
     client_id: process.env.CLIENT_ID,
-    auth_uri: "https://accounts.google.com/o/oauth2/auth",
-    token_uri: "https://oauth2.googleapis.com/token",
-    auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+    auth_uri: process.env.AUTH_URI,
+    token_uri: process.env.TOKEN_URI,
+    auth_provider_x509_cert_url: process.env.AUTH_PROVIDER_X509_CERT_URL,
     client_x509_cert_url: process.env.CLIENT_X509_CERT_URL,
-    universe_domain: "googleapis.com",
-  }),
+    universe_domain:process.env.UNIVERSE_DOMAIN,
+  }), 
   storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
 });
 
